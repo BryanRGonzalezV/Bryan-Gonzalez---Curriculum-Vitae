@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan Gonzalez | Portafolio & CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f0f6ff',
+                            100: '#e0edff',
+                            200: '#bae0ff',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e3a8a',
+                            900: '#0f172a',
+                            950: '#0a0f1d'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos optimizados para impresión */
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+            .print-shadow-none { box-shadow: none !important; }
+            .print-border { border: 1px solid #cbd5e1 !important; }
+            aside { background-color: #0f172a !important; color: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+        
+        .tab-btn.active {
+            border-bottom-color: #2563eb;
+            color: #2563eb;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased font-sans min-h-screen flex flex-col">
+
+    <!-- Header Navbar / Action Bar (No Print) -->
+    <header class="no-print bg-navy-950 text-white sticky top-0 z-50 shadow-lg border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div class="flex items-center space-x-3">
+                <span class="w-3 h-3 rounded-full bg-blue-500 inline-block animate-pulse"></span>
+                <span class="font-bold tracking-wide text-base">Bryan Gonzalez - Curriculum Vitae</span>
+            </div>
+            
+            <!-- ENLACES: Navegación Interna por Anchors -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm text-slate-300">
+                <a href="#perfil" class="hover:text-blue-400 transition">Perfil</a>
+                <a href="#experiencia" class="hover:text-blue-400 transition">Experiencia</a>
+                <a href="#habilidades" class="hover:text-blue-400 transition">Habilidades</a>
+                <a href="#educacion" class="hover:text-blue-400 transition">Educación</a>
+                <a href="#contacto-form" class="hover:text-blue-400 transition">Contacto</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <button onclick="window.print()" class="flex items-center space-x-2 bg-blue-700 hover:bg-blue-600 text-white px-3.5 py-1.5 rounded-lg text-xs md:text-sm font-medium transition duration-200 shadow">
+                    <i class="fas fa-print"></i>
+                    <span>Imprimir / PDF</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-6xl w-full mx-auto p-4 md:p-6 lg:p-8">
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 print-shadow-none print-border">
+            
+            <!-- Left Sidebar (Contact & Personal Info in Navy Blue) -->
+            <aside class="lg:col-span-4 bg-navy-900 text-slate-200 p-6 md:p-8 flex flex-col justify-between">
+                <div>
+                    <!-- IMÁGENES: Foto de Perfil con fallback elegante -->
+                    <div class="flex flex-col items-center text-center pb-8 border-b border-slate-700/80">
+                        <div class="relative group mb-4">
+                            <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl bg-slate-800 flex items-center justify-center">
+                                <img src="foto.png" 
+                                     alt="Fotografía Profesional de Bryan Gonzalez" 
+                                     id="profile-img"
+                                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Bryan+Gonzalez&background=1e3a8a&color=fff&size=200';"
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- ENCABEZADOS: H1 principal -->
+                        <h1 class="text-2xl font-extrabold text-white tracking-tight">Bryan Gonzalez</h1>
+                        <p class="text-blue-400 font-medium text-sm mt-1">Estudiante de Ingeniería en Software</p>
+                        
+                        <!-- ENLACES Externos (Sociales/Redes) -->
+                        <div class="no-print flex items-center space-x-3 mt-4">
+                            <a href="mailto:bryan18042005@gmail.com" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition text-slate-300 hover:text-white" title="Enviar Email Directo">
+                                <i class="fas fa-envelope text-xs"></i>
+                            </a>
+                            <a href="tel:8297166892" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition text-slate-300 hover:text-white" title="Llamar">
+                                <i class="fas fa-phone text-xs"></i>
+                            </a>
+                            <a href="https://github.com/BryanRGonzalezV" target="_blank" rel="noopener" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition text-slate-300 hover:text-white" title="Perfil GitHub">
+                                <i class="fab fa-github text-xs"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/bryan-rafael-gonzález-vargas-532161164/" target="_blank" rel="noopener" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition text-slate-300 hover:text-white" title="Perfil LinkedIn">
+                                <i class="fab fa-linkedin-in text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ENCABEZADOS: H2 de Sección de Contacto con ENLACES activos mailto y tel -->
+                    <div id="contacto" class="py-6 border-b border-slate-700/80">
+                        <h2 class="text-xs uppercase font-bold tracking-wider text-blue-400 mb-4 flex items-center">
+                            <i class="fas fa-address-book mr-2"></i> Información de Contacto
+                        </h2>
+                        
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-start justify-between group">
+                                <div class="flex items-center space-x-3 overflow-hidden">
+                                    <i class="fas fa-phone text-blue-400 w-4"></i>
+                                    <!-- ENLACE: teléfono -->
+                                    <a href="tel:8297166892" class="hover:text-blue-300 underline-offset-2 hover:underline truncate">(829)-716-6892</a>
+                                </div>
+                                <button onclick="copyToClipboard('(829)-716-6892', 'Teléfono copiado')" class="no-print text-slate-400 hover:text-blue-300 ml-2 p-1 transition" title="Copiar Teléfono">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </li>
+
+                            <li class="flex items-start justify-between group">
+                                <div class="flex items-center space-x-3 overflow-hidden">
+                                    <i class="fas fa-envelope text-blue-400 w-4"></i>
+                                    <!-- ENLACE: Correo mailto -->
+                                    <a href="mailto:bryan18042005@gmail.com" class="hover:text-blue-300 underline-offset-2 hover:underline truncate text-xs sm:text-sm">bryan18042005@gmail.com</a>
+                                </div>
+                                <button onclick="copyToClipboard('bryan18042005@gmail.com', 'Correo copiado')" class="no-print text-slate-400 hover:text-blue-300 ml-2 p-1 transition" title="Copiar Email">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </li>
+
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-map-marker-alt text-blue-400 w-4 mt-1"></i>
+                                <span class="text-xs sm:text-sm">Av. monumental, reparto miguelina, calle 2</span>
+                            </li>
+
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-calendar-alt text-blue-400 w-4"></i>
+                                <span>18 / 04 / 2005</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Idiomas -->
+                    <div class="py-6 border-b border-slate-700/80">
+                        <h2 class="text-xs uppercase font-bold tracking-wider text-blue-400 mb-4 flex items-center">
+                            <i class="fas fa-globe mr-2"></i> Idiomas
+                        </h2>
+                        <!-- LISTAS: Lista no ordenada para idiomas -->
+                        <ul class="space-y-3">
+                            <li class="bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/50">
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-semibold text-slate-200">Español</span>
+                                    <span class="text-xs text-blue-300 font-medium">Nativo</span>
+                                </div>
+                                <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-blue-500 h-full w-full"></div>
+                                </div>
+                            </li>
+                            <li class="bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/50">
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-semibold text-slate-200">Inglés</span>
+                                    <span class="text-xs text-blue-300 font-medium">Intermedio Alto (B2)</span>
+                                </div>
+                                <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-blue-500 h-full w-[75%]"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Referencias -->
+                    <div class="pt-6">
+                        <h2 class="text-xs uppercase font-bold tracking-wider text-blue-400 mb-2 flex items-center">
+                            <i class="fas fa-user-check mr-2"></i> Referencias
+                        </h2>
+                        <p class="text-xs text-slate-400 italic">Referencias personales y laborales disponibles de inmediato a solicitud.</p>
+                    </div>
+                </div>
+
+                <!-- Toast Notification -->
+                <div id="toast" class="no-print hidden fixed bottom-5 right-5 bg-navy-950 text-white px-4 py-3 rounded-xl shadow-2xl text-sm border border-blue-500 flex items-center space-x-3 z-50">
+                    <i class="fas fa-check-circle text-emerald-400 text-lg"></i>
+                    <span id="toast-message">Copiado al portapapeles</span>
+                </div>
+            </aside>
+
+            <!-- Right Main Content Area -->
+            <section class="lg:col-span-8 p-6 md:p-10 flex flex-col justify-between">
+                <div>
+                    <!-- ENCABEZADOS: Perfil Profesional -->
+                    <div id="perfil" class="mb-8 border-b pb-6 border-slate-200">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-blue-100 text-navy-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                Resumen Ejecutivo
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-800 mb-2">Perfil Profesional</h2>
+                        <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                            Estudiante de Ingeniería en Software con conocimientos en soporte técnico, desarrollo básico en Java y Python, y fundamentos en testing de software. Interesado en el área de soporte IT, con habilidades demostradas en resolución de problemas, análisis de datos con SQL/Excel, desarrollo de tableros/páginas web informativas y trabajo en equipo.
+                        </p>
+                    </div>
+
+                    <!-- Filtros / Navegación por pestañas -->
+                    <div class="no-print flex border-b border-slate-200 mb-6 space-x-6 overflow-x-auto text-sm font-medium">
+                        <button onclick="switchTab('all')" id="tab-all" class="tab-btn active pb-3 border-b-2 border-transparent hover:text-blue-700 transition">Todo</button>
+                        <button onclick="switchTab('exp')" id="tab-exp" class="tab-btn pb-3 border-b-2 border-transparent hover:text-blue-700 transition">Experiencia</button>
+                        <button onclick="switchTab('skills')" id="tab-skills" class="tab-btn pb-3 border-b-2 border-transparent hover:text-blue-700 transition">Habilidades & Tabla</button>
+                        <button onclick="switchTab('edu')" id="tab-edu" class="tab-btn pb-3 border-b-2 border-transparent hover:text-blue-700 transition">Educación</button>
+                    </div>
+
+                    <!-- Experiencia Laboral -->
+                    <div id="section-exp" class="tab-content mb-10">
+                        <div id="experiencia" class="flex items-center mb-6">
+                            <div class="bg-navy-800 text-white p-2.5 rounded-lg shadow-md mr-3">
+                                <i class="fas fa-briefcase text-lg"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-800">Experiencia Profesional</h2>
+                        </div>
+
+                        <div class="relative border-l-2 border-blue-200 ml-4 pl-6 space-y-8">
+                            
+                            <!-- Exp Item: Analista WFM BHD -->
+                            <div class="relative group">
+                                <div class="absolute -left-[31px] top-1 bg-blue-600 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm">
+                                    <div class="flex flex-wrap justify-between items-start gap-2 mb-1">
+                                        <!-- ENCABEZADOS: H3 para cargo -->
+                                        <h3 class="text-base font-bold text-navy-900">Analista Workforce Management (WFM) – Banco BHD</h3>
+                                        <span class="text-xs font-semibold text-blue-800 bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-200">4 Meses</span>
+                                    </div>
+                                    <!-- LISTAS: Lista no ordenada para responsabilidades clave -->
+                                    <ul class="mt-2 space-y-1.5 text-slate-600 text-xs md:text-sm list-disc pl-4">
+                                        <li>Análisis avanzado de datos operacionales y métricas clave utilizando <strong>SQL</strong> y <strong>Excel</strong>.</li>
+                                        <li>Desarrollo y creación de páginas web interactivas para la visualización y presentación clara de la información gerencial.</li>
+                                        <li>Optimización en el monitoreo y reporte de métricas en tiempo real.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Exp Item: Soporte BHD -->
+                            <div class="relative group">
+                                <div class="absolute -left-[31px] top-1 bg-navy-800 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm">
+                                    <h3 class="text-base font-bold text-navy-900">Soporte Técnico – Outsourcing para Banco BHD</h3>
+                                    <ul class="mt-2 space-y-1.5 text-slate-600 text-xs md:text-sm list-disc pl-4">
+                                        <li>Resolución eficiente de incidencias técnicas en hardware y software corporativo.</li>
+                                        <li>Atención técnica remota y presencial a usuarios finales.</li>
+                                        <li>Mantenimiento preventivo, correctivo y diagnóstico integral de equipos informáticos.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Exp Item: Dispositivos y Software -->
+                            <div class="relative group">
+                                <div class="absolute -left-[31px] top-1 bg-navy-800 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm">
+                                    <h3 class="text-base font-bold text-navy-900">Experiencia en Dispositivos Electrónicos y Software</h3>
+                                    <ul class="mt-2 space-y-1.5 text-slate-600 text-xs md:text-sm list-disc pl-4">
+                                        <li>Conocimientos destacados en ensamblaje, diagnóstico y mantenimiento de hardware.</li>
+                                        <li>Manejo de herramientas de desarrollo: Java, PSeInt, HTML, C#, Python y entorno Visual Studio.net.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Exp Item: Atención al Cliente & QA -->
+                            <div class="relative group">
+                                <div class="absolute -left-[31px] top-1 bg-navy-800 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+                                        <h4 class="font-bold text-slate-800 text-xs md:text-sm">Atención al Cliente – Eventos Deportivos</h4>
+                                        <p class="text-xs text-slate-600 mt-1">Gestión de soporte a participantes y apoyo logístico directo en eventos de asistencia masiva.</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+                                        <h4 class="font-bold text-slate-800 text-xs md:text-sm">Formación Práctica en QA Testing</h4>
+                                        <p class="text-xs text-slate-600 mt-1">Fundamentos de pruebas manuales, elaboración de casos de prueba y reporte sistemático de errores (bugs).</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Habilidades & Tabla de Competencias -->
+                    <div id="section-skills" class="tab-content mb-10">
+                        <div id="habilidades" class="flex items-center mb-6">
+                            <div class="bg-navy-800 text-white p-2.5 rounded-lg shadow-md mr-3">
+                                <i class="fas fa-tools text-lg"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-800">Habilidades & Matriz Competencial</h2>
+                        </div>
+
+                        <!-- TABLAS: Tabla de Competencias Técnicas -->
+                        <div class="mb-8">
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-blue-700 mb-3 flex items-center">
+                                <i class="fas fa-table mr-2"></i> Desglose de Competencias Técnicas
+                            </h3>
+                            <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+                                <table class="w-full text-left text-xs md:text-sm text-slate-600">
+                                    <thead class="bg-navy-900 text-white uppercase text-[11px] tracking-wider">
+                                        <tr>
+                                            <th scope="col" class="px-4 py-3">Tecnología / Herramienta</th>
+                                            <th scope="col" class="px-4 py-3">Nivel de Dominio</th>
+                                            <th scope="col" class="px-4 py-3">Área de Aplicación</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-200 bg-white">
+                                        <tr class="hover:bg-slate-50">
+                                            <td class="px-4 py-3 font-semibold text-slate-800 flex items-center">
+                                                <i class="fas fa-database text-blue-600 mr-2"></i> SQL
+                                            </td>
+                                            <td class="px-4 py-3"><span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-medium text-xs">Intermedio</span></td>
+                                            <td class="px-4 py-3">Análisis de datos, consultas y reportería WFM</td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50">
+                                            <td class="px-4 py-3 font-semibold text-slate-800">
+                                                <i class="fab fa-html5 text-orange-500 mr-2"></i> HTML / Web Dev
+                                            </td>
+                                            <td class="px-4 py-3"><span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-medium text-xs">Intermedio</span></td>
+                                            <td class="px-4 py-3">Creación de páginas estáticas e interactivas</td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50">
+                                            <td class="px-4 py-3 font-semibold text-slate-800">
+                                                <i class="fas fa-headset text-indigo-600 mr-2"></i> Soporte IT Hardware/Software
+                                            </td>
+                                            <td class="px-4 py-3"><span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-medium text-xs">Avanzado</span></td>
+                                            <td class="px-4 py-3">Mantenimiento, diagnóstico y atención a usuarios</td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50">
+                                            <td class="px-4 py-3 font-semibold text-slate-800">
+                                                <i class="fab fa-java text-red-500 mr-2"></i> Java / Python / C#
+                                            </td>
+                                            <td class="px-4 py-3"><span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium text-xs">Básico - Intermedio</span></td>
+                                            <td class="px-4 py-3">Lógica de programación y desarrollo académico</td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50">
+                                            <td class="px-4 py-3 font-semibold text-slate-800">
+                                                <i class="fas fa-file-excel text-green-600 mr-2"></i> Excel
+                                            </td>
+                                            <td class="px-4 py-3"><span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-medium text-xs">Intermedio</span></td>
+                                            <td class="px-4 py-3">Gestión de datos y tableros operativos</td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50">
+                                            <td class="px-4 py-3 font-semibold text-slate-800">
+                                                <i class="fas fa-vial text-teal-600 mr-2"></i> QA Manual Testing
+                                            </td>
+                                            <td class="px-4 py-3"><span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium text-xs">Básico</span></td>
+                                            <td class="px-4 py-3">Diseño de pruebas y documentación de errores</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- LISTAS: Lista ordenada (OL) para Habilidades Blandas -->
+                        <div>
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Habilidades Blandas Prioritarias</h3>
+                            <ol class="grid grid-cols-1 sm:grid-cols-3 gap-3 list-decimal list-inside text-sm">
+                                <li class="bg-blue-50 border border-blue-100 p-3 rounded-lg text-navy-900 font-semibold">
+                                    <span>Trabajo en equipo y colaboración</span>
+                                </li>
+                                <li class="bg-blue-50 border border-blue-100 p-3 rounded-lg text-navy-900 font-semibold">
+                                    <span>Proactividad y pensamiento analítico</span>
+                                </li>
+                                <li class="bg-blue-50 border border-blue-100 p-3 rounded-lg text-navy-900 font-semibold">
+                                    <span>Resolución efectiva de problemas</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Educación -->
+                    <div id="section-edu" class="tab-content mb-10">
+                        <div id="educacion" class="flex items-center mb-6">
+                            <div class="bg-navy-800 text-white p-2.5 rounded-lg shadow-md mr-3">
+                                <i class="fas fa-graduation-cap text-lg"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-800">Educación & Formación</h2>
+                        </div>
+
+                        <div class="relative border-l-2 border-blue-200 ml-4 pl-6 space-y-6">
+                            <div class="relative">
+                                <div class="absolute -left-[31px] top-1 bg-blue-600 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                                <h3 class="text-base font-bold text-slate-800">Universidad Dominico-Americano</h3>
+                                <p class="text-sm font-semibold text-blue-700">Ingeniería en Software</p>
+                                <p class="text-xs text-slate-500 mt-1">Actualmente cursando (10mo cuatrimestre)</p>
+                            </div>
+
+                            <div class="relative">
+                                <div class="absolute -left-[31px] top-1 bg-navy-800 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                                <h3 class="text-base font-bold text-slate-800">Colegio Don Honorio</h3>
+                                <p class="text-sm text-slate-600">Educación Secundaria</p>
+                                <span class="inline-block mt-1 text-xs bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded font-medium">Graduado con honores</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FORMULARIO BÁSICO: Formulario de Contacto -->
+                    <div id="contacto-form" class="no-print pt-6 border-t border-slate-200">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-600 text-white p-2 rounded-lg mr-2 text-sm">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <h2 class="text-lg font-bold text-slate-800">Enviarme un Mensaje Directo</h2>
+                        </div>
+                        
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="nombre" class="block text-xs font-semibold text-slate-700 mb-1">Tu Nombre *</label>
+                                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-xs font-semibold text-slate-700 mb-1">Tu Correo Electrónico *</label>
+                                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="asunto" class="block text-xs font-semibold text-slate-700 mb-1">Asunto *</label>
+                                <input type="text" id="asunto" name="asunto" required placeholder="Oportunidad laboral / Consulta" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
+                            </div>
+
+                            <div>
+                                <label for="mensaje" class="block text-xs font-semibold text-slate-700 mb-1">Mensaje *</label>
+                                <textarea id="mensaje" name="mensaje" rows="3" required placeholder="Escribe tu mensaje aquí..." class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full sm:w-auto px-6 py-2.5 bg-blue-700 hover:bg-blue-800 text-white font-medium text-sm rounded-lg shadow-md transition duration-200 flex items-center justify-center space-x-2">
+                                <i class="fas fa-paper-plane text-xs"></i>
+                                <span>Enviar Mensaje</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="pt-6 border-t border-slate-200 text-xs text-slate-400 flex justify-between items-center mt-8">
+                    <span>Bryan Gonzalez &copy; 2026</span>
+                    <span>Curriculum Vitae Interactivo</span>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        // Copiar texto al portapapeles
+        function copyToClipboard(text, customMessage) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast(customMessage || 'Copiado al portapapeles');
+        }
+
+        // Mostrar notificación tipo Toast
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = message;
+            
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Lógica para cambiar entre pestañas de contenido
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            const activeTabBtn = document.getElementById('tab-' + tab);
+            if (activeTabBtn) activeTabBtn.classList.add('active');
+
+            const sections = {
+                'exp': document.getElementById('section-exp'),
+                'skills': document.getElementById('section-skills'),
+                'edu': document.getElementById('section-edu')
+            };
+
+            if (tab === 'all') {
+                Object.values(sections).forEach(s => s && s.classList.remove('hidden'));
+            } else {
+                Object.keys(sections).forEach(key => {
+                    if (sections[key]) {
+                        if (key === tab) {
+                            sections[key].classList.remove('hidden');
+                        } else {
+                            sections[key].classList.add('hidden');
+                        }
+                    }
+                });
+            }
+        }
+
+        // Manejo del formulario de contacto
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            showToast(`¡Gracias ${nombre}! Tu mensaje ha sido procesado.`);
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>
